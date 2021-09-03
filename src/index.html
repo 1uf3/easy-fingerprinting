@@ -1,10 +1,27 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <tile>Hello</title>
+    <tile>fingerprinting!</title>
+    <script src="fingerprint.js"></script>
   </head>
   <body>
     <h1>hello</h1>
+    <script>
+      document.writeln("OSType: " + getOS());
+      document.writeln("<p></p>");
+      document.writeln("Language: " + getLanguage());
+      document.writeln("<p></p>");
+      document.writeln("CPUThread: " + getCpuThread());
+      document.writeln("<p></p>");
+      document.writeln("BrowserType: " + getBrowserType());
+      document.writeln("<p></p>");
+      document.writeln("Timezone: " + getTimezone());
+      document.writeln("<p></p>");
+      document.writeln("Screen wide: " + getScreenResolution());
+      document.writeln("<p></p>");
+      var img = new Image();
+      img.src = getCanvasFingerprint();
+      document.body.appendChild(img);
+    </script>
   </body>
 </html>
-
